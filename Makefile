@@ -29,5 +29,6 @@ graficos: csv
 # make clean  ->  apaga o executável
 clean:
 	rm -f $(BIN)
+	find saida -type f ! -name '.gitkeep' -delete
 
 .PHONY: all run csv graficos clean
