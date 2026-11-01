@@ -27,7 +27,7 @@ Resultado newton_raphson(double a, double d0, double e, int itmax) {
         double erro = std::fabs(d_novo - d);
 
         // Verifica convergência
-        if (erro < e) {
+        if (erro < e && manual::fabs(f(d, a)) < e) {
             r.d = d_novo;
             r.iteracoes = k + 1;
             r.erro_parada = erro;
